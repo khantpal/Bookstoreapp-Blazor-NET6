@@ -1,5 +1,4 @@
 ﻿@page "/books/create/"
-@using Microsoft.AspNetCore.Authorization
 @attribute [Authorize(Roles = Roles.Administrator)]
 @inject IBookService bookService
 @inject IAuthorService authorService
@@ -9,7 +8,7 @@
 
 <EditForm Model="Book" OnValidSubmit="HandleBookCreate">
     <DataAnnotationsValidator />
-    <ValidationSummary />
+@*     <ValidationSummary /> *@
     <div class="form-group">
         <label for="title">Book Title</label>
         <InputText @bind-Value="Book.Title" class="form-control" id="title" />
