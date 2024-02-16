@@ -8,7 +8,7 @@
 
 <EditForm Model="Book" OnValidSubmit="HandleBookCreate">
     <DataAnnotationsValidator />
-@*     <ValidationSummary /> *@
+    <ValidationSummary />
     <div class="form-group">
         <label for="title">Book Title</label>
         <InputText @bind-Value="Book.Title" class="form-control" id="title" />

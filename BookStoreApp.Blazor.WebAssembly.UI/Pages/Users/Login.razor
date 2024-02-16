@@ -7,7 +7,7 @@
 <div>
     <EditForm Model="LoginModel" OnValidSubmit="HandleLogin">
         <DataAnnotationsValidator />
-        @* <ValidationSummary /> *@
+        <ValidationSummary />
         <div class="form-group">
             <label for="email">Email Address</label>
             <InputText class="form-control" @bind-Value="LoginModel.Email" />

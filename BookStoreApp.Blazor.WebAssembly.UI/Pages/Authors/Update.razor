@@ -7,7 +7,7 @@
 
 <EditForm Model="Author" OnValidSubmit="HandleUpdateAuthor">
     <DataAnnotationsValidator />
-  @*   <ValidationSummary /> *@
+    <ValidationSummary />
     <div class="form-group">
         <label for="firstname">First Name</label>
         <InputText @bind-Value="Author.FirstName" class="form-control" id="firstname" />
@@ -61,7 +61,7 @@
         }
     }
 
-  private void BackToList()
+    private void BackToList()
     {
         navManager.NavigateTo("/authors/");
     }
